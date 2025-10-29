@@ -8,20 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/api/webhook",
-      "methods": ["POST"],
-      "dest": "server/index.js",
-      "headers": {
-        "Content-Type": "application/json"
-      }
-    },
-    {
       "src": "/api/(.*)",
       "dest": "server/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/dist/$1"
     }
   ]
 }
