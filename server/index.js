@@ -23,7 +23,8 @@ app.use('/api/webhook', webhookRouter);
 app.use('/api/invoices', invoicesRouter);
 app.get('/', (req, res) => res.send('MERN Ecom Server'));
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
     .then(() => {
         console.log('Mongo connected');
         app.listen(PORT, () => console.log(`Server listening ${PORT}`));

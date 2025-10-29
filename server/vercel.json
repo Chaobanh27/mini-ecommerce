@@ -23,18 +23,5 @@
       "src": "/(.*)",
       "dest": "/client/dist/$1"
     }
-  ],
-  "env": {
-    "MONGO_URI": "@mongo_uri",
-    "STRIPE_SECRET": "@stripe_secret",
-    "STRIPE_WEBHOOK_SECRET": "@stripe_webhook_secret",
-    "CLIENT_URL": "@client_url"
-  },
-  "functions": {
-    "api/webhook.js": {
-      "runtime": "nodejs18.x",
-      "memory": 256,
-      "maxDuration": 10
-    }
-  }
+  ]
 }
