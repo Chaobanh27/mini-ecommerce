@@ -1,0 +1,1 @@
+export const API = (path) => `${import.meta.env.VITE_API_BASE || 'http://localhost:4000'} /api${path}`;
